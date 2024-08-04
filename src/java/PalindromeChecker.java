@@ -1,24 +1,14 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class palinFunc {
+public class PalindromeChecker {
 
     //user input
 
-    public static Scanner sc = new Scanner(System.in);
+    // public static Scanner sc = new Scanner(System.in);
     public static String str;
 
     public static boolean isPalindrome(String str) {
-
-        //user friendly interface
-
-        System.out.println("Input your word here:");
-
-        // create parameter
-
-        palinFunc.str = str;
-        str = sc.nextLine().toLowerCase();
-        System.out.println();
 
         // apparently, spaces are palindromes! :p
 
@@ -53,7 +43,7 @@ public class palinFunc {
         // parameters of the left and right variables to compare character values
 
         int x = 0;
-        int y = newArray.indexOf(newArray.getLast());
+        int y = newArray.indexOf(newArray.get(newArray.size()-1));
 
         // left and right variable assignments
 
@@ -65,7 +55,7 @@ public class palinFunc {
             if (left == right) {
                 x++;
                 y--;
-                if (newArray.get(x) == newArray.getLast()) {
+                if (newArray.get(x) == newArray.get(newArray.size()-1)) {
                     return true;
                 }
 
